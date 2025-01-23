@@ -9,7 +9,7 @@ function footer(){
                         <h2>Programmed in js</h2>\
                         <p>\
                            <br>\
-                            skibidi<br>\
+                            <br>\
                             
                         </p>\
                     </div>\
