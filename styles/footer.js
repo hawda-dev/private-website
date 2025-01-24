@@ -6,7 +6,7 @@ function footer(){
             <div id="footer">\
                 <div id="footer-infos">\
                     <div>\
-                        <h2>code: Hawdaweb</h2>\
+                        <h2>redeem code: hawdaweb</h2>\
                         <p>\
                            <br>\
                             <br>\
