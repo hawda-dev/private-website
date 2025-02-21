@@ -6,7 +6,7 @@ function footer(){
             <div id="footer">\
                 <div id="footer-infos">\
                     <div>\
-                        <h2>🏆Best exploit of 2024-2025 🏆</h2>\
+                        <h2>made by: Hawda_. and cash</h2>\
                         <p>\
                            <br>\
                             <br>\
