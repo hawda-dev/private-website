@@ -21,12 +21,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Dark Green-Black Theme */
+/* Dark Amber-Black Theme */
 :root {
-    --dark-green: #0B0C0A;
+    --dark-background: #0B0C0A;
     --dark-gray: #1A1D1A;
-    --green-accent: #2E8B57; /* Dark Green Accent */
-    --soft-green: #A9DFBF; /* Soft Green for text */
+    --amber-accent: #FFBF00; /* Amber Accent */
+    --soft-amber: #FFD580; /* Soft Amber for text */
     --font1: "Oswald";
     --font2: "Montserrat";
     --font3: "Roboto";
@@ -52,8 +52,8 @@ html {
     display: flex;
     padding-top: 100px;
     padding-bottom: 80px;
-    background: var(--dark-green);
-    color: var(--soft-green);
+    background: var(--dark-background);
+    color: var(--soft-amber);
 }
 
 /* Title and Content Styling */
@@ -81,20 +81,20 @@ html {
 }
 
 #actual #actual-list li h3 a {
-    color: var(--soft-green);
+    color: var(--soft-amber);
     font-size: 150%;
     transition: 0.2s;
 }
 
 #actual #actual-list li h3 a:hover {
-    color: var(--green-accent);
+    color: var(--amber-accent);
     text-decoration: underline;
     transition: 0.2s;
 }
 
 #actual #actual-list li h4 {
     font-family: var(--font2);
-    color: var(--green-accent);
+    color: var(--amber-accent);
 }
 
 #actual #actual-list li p {
@@ -148,7 +148,7 @@ ol, ul#others-list {
     font-family: var(--font1);
     margin-top: 30px;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--soft-green);
+    border-bottom: 1px solid var(--soft-amber);
 }
 
 #resume h3 {
@@ -206,12 +206,13 @@ ol, ul#others-list {
 
 /* Links in Resume */
 #resume a {
-    color: var(--green-accent);
+    color: var(--amber-accent);
 }
 
 #resume a:hover {
     text-decoration: underline;
 }
+
 
 
 
