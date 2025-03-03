@@ -1,14 +1,10 @@
 
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
+/* Dark Amber Themed */
 :root {
-    --dark-green: #0d1b0f;
-    --light-green: #3ba55d;
-    --text-color: #c0e8c0;
-    --soft-green: #5fd35f;
+    --dark-brown: #2b1d16;   /* Deep brown for background */
+    --amber: #ffbf00;        /* Amber color for accents */
+    --text-color: #f2e4b5;    /* Soft light amber for text */
+    --soft-amber: #e08e00;   /* Softer amber shade */
     --font1: "Oswald";
     --font2: "Montserrat";
     --font3: "Roboto";
@@ -28,7 +24,7 @@ a {
 }
 
 a:hover {
-    color: var(--soft-green);
+    color: var(--amber);
     transition: 0.2s;
 }
 
@@ -38,7 +34,7 @@ header {
     height: 10vh;
     width: 100%;
     display: flex;
-    background: rgba(13, 27, 15, 0.9);
+    background: rgba(43, 29, 22, 0.9);  /* Dark brown with slight opacity */
     font-family: var(--font2);
 }
 
@@ -78,7 +74,7 @@ header #pages li {
 }
 
 #hero {
-    background: var(--dark-green);
+    background: var(--dark-brown);  /* Dark brown background */
     height: 100vh;
     padding: 0 var(--horizontal_margin);
 }
@@ -91,12 +87,12 @@ header #pages li {
 }
 
 #hero #title h1 {
-    color: var(--light-green);
+    color: var(--amber);  /* Amber color for title */
     font-family: var(--font1);
 }
 
 #hero #title p {
-    color: var(--text-color);
+    color: var(--text-color);  /* Soft light amber for text */
     text-align: left;
     font-family: var(--font3);
 }
@@ -106,7 +102,7 @@ header #pages li {
     position: absolute;
     width: 85%;
     padding: 40px 0;
-    border-top: var(--soft-green) 2px solid;
+    border-top: var(--soft-amber) 2px solid;  /* Softer amber for border */
     font-family: var(--font2);
 }
 
@@ -121,7 +117,7 @@ header #pages li {
 }
 
 #hero #contact ul li p {
-    color: var(--light-green);
+    color: var(--amber);  /* Amber color for contact text */
 }
 
 @media (max-width: 800px) {
@@ -142,3 +138,4 @@ header #pages li {
         font-size: 60%;
     }
 }
+
