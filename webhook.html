@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Sender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            color: #ffffff;
+            background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #000000);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333333;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555555;
+        }
+        .credits {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+            color: #888888;
+        }
+    </style>
+</head>
+    
+<body style="background-color:black;">
+    <h2>Send a Message to Discord, by using this app you agree on ur data being collected</h2>
+    
+    <textarea id="message" placeholder="Enter your message..."></textarea><br>
+    <button onclick="sendMessage()">Send</button>
+    
+    <div class="credits">Created by Hawda - 2025</div>
+    
+    <script>
+        function sendMessage() {
+            const webhookUrl = "https://discord.com/api/webhooks/1344320715620356197/585gC6m2TZLs02SCWSkjQfRytdpoeQvbdaLCLv7xYbwOCsYHp99JgAtngXnVGkOQ5AmS"; // Replace with your actual webhook URL
+            const message = document.getElementById("message").value;
+            document.getElementById("message").value = "";
+            
+            if (!message.trim()) {
+                return;
+            }
+            
+            fetch(webhookUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ content: message })
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById("message").value = "";
+                }
+            });
+        }
+        
+    </script>
+</body>
+</html>
