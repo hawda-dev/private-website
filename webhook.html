@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Sender</title>
     <style>
+        :root {
+            --dark-amber: #2e2b0f; /* Dark amber color */
+            --amber: #d9a234; /* Amber color */
+            --light-amber: #ffb94f; /* Lighter amber color */
+            --text-color: #f1f1f1; /* Light text color */
+            --bg-gradient: linear-gradient(-45deg, #2e2b0f, #2d1f10, #2e2b0f, #2d1f10); /* Dark amber gradient background */
+        }
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
-            color: #ffffff;
-            background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #000000);
+            color: var(--text-color);
+            background: var(--bg-gradient);
             background-size: 400% 400%;
             animation: gradientBG 10s ease infinite;
             display: flex;
@@ -32,23 +40,26 @@
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: #3a2e0f; /* Dark amber background for the input */
+            color: var(--text-color);
             font-size: 16px;
         }
+        
         button {
             padding: 10px 20px;
             font-size: 16px;
             border: none;
             border-radius: 5px;
-            background-color: #333333;
-            color: white;
+            background-color: var(--dark-amber); /* Dark amber for the button */
+            color: var(--text-color);
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
         button:hover {
-            background-color: #555555;
+            background-color: var(--amber); /* Lighter amber on hover */
         }
+
         .credits {
             margin-top: auto;
             padding: 20px;
@@ -56,27 +67,55 @@
             opacity: 0.7;
             color: #888888;
         }
+
+        .disabled {
+            background-color: #555555; /* Gray background when disabled */
+            cursor: not-allowed;
+        }
     </style>
 </head>
     
-<body style="background-color:black;">
-    <h2>Send a Message to Discord, by using this app you agree on ur data being collected</h2>
+<body>
+    <h2>Send a Message to Discord, by using this app you agree on your data being collected</h2>
     
     <textarea id="message" placeholder="Enter your message..."></textarea><br>
-    <button onclick="sendMessage()">Send</button>
+    <button id="sendButton" onclick="sendMessage()">Send</button>
     
     <div class="credits">Created by Hawda - 2025</div>
     
     <script>
+        // Disable button initially and add the cooldown when the page loads
+        window.onload = function() {
+            const sendButton = document.getElementById("sendButton");
+            sendButton.disabled = true;
+            sendButton.classList.add('disabled');
+            sendButton.textContent = "Please wait...";
+
+            setTimeout(() => {
+                sendButton.disabled = false;
+                sendButton.classList.remove('disabled');
+                sendButton.textContent = "Send"; // Reset button text after initial cooldown
+            }, 15000); // 15 seconds cooldown on page load
+        };
+
         function sendMessage() {
             const webhookUrl = "https://discord.com/api/webhooks/1344320715620356197/585gC6m2TZLs02SCWSkjQfRytdpoeQvbdaLCLv7xYbwOCsYHp99JgAtngXnVGkOQ5AmS"; // Replace with your actual webhook URL
             const message = document.getElementById("message").value;
-            document.getElementById("message").value = "";
-            
+            const sendButton = document.getElementById("sendButton");
+
+            // If no message is entered, don't proceed
             if (!message.trim()) {
                 return;
             }
-            
+
+            // Disable the button and start cooldown
+            sendButton.disabled = true;
+            sendButton.classList.add('disabled');
+            sendButton.textContent = "Sending...";
+
+            document.getElementById("message").value = ""; // Clear message field
+
+            // Send the message
             fetch(webhookUrl, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -84,11 +123,16 @@
             })
             .then(response => {
                 if (response.ok) {
-                    document.getElementById("message").value = "";
+                    setTimeout(() => {
+                        // Re-enable button after 15 seconds
+                        sendButton.disabled = false;
+                        sendButton.classList.remove('disabled');
+                        sendButton.textContent = "Send"; // Reset button text
+                    }, 15000); // 15 seconds cooldown
                 }
             });
         }
-        
     </script>
 </body>
 </html>
+
