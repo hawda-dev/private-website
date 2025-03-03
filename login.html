@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protect</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(-45deg, #2b1d16, #3e2a1d, #2b1d16, #3e2a1d); /* Deep brown background */
+        background-size: 400% 400%;
+        animation: gradientBG 5s ease infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #f2e4b5; /* Soft light amber for text */
+      }
+
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      .login-card {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 320px;
+        border: 2px solid #ffbf00; /* Amber border */
+      }
+
+      h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        color: #ffbf00; /* Amber for heading */
+      }
+
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin: 12px 0;
+        border: 1px solid #ffbf00; /* Amber border for inputs */
+        border-radius: 5px;
+        background-color: #3e2a1d; /* Dark brown background for inputs */
+        color: #f2e4b5; /* Soft amber text inside inputs */
+      }
+
+      .login-submit {
+        background: #ffbf00; /* Amber button */
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        width: 100%;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .login-submit:hover {
+        background: #e08e00; /* Darker amber on hover */
+      }
+
+      .login-help a {
+        text-decoration: none;
+        color: #ffbf00; /* Amber for links */
+        font-size: 14px;
+      }
+
+      .login-help a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #f2e4b5; /* Soft amber footer text */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-card">
+        <h1>Password Protected Login</h1>
+      <form>
+        <script type="text/javascript" src="scripts/login.js"></script>
+        <input type="text" name="userid" placeholder="Username" required>
+        <input type="password" name="pswrd" placeholder="Password" required>
+        <input type="button" onclick="check(form)" name="login" class="login-submit" value="Login">
+      </form>
+      <p></p>
+      <div class="login-help">
+        <a href="register.html">Register</a> • <a href="forgot-password.html">Forgot Password</a>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <center>
+      <div class="container">
+        <p>__________________________________</p>
+        <p>&copy; Michael Bateman. All rights reserved. <a href=mailto:info@michaelbateman.ca>Contact me</a>.</p>
+      </div>
+    </center>
+  </footer>
+</html>
