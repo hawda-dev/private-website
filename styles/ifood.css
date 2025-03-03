@@ -1,7 +1,7 @@
 :root {
-    --red: #4392f1;
+    --amber: #FFBF00;
     --grey: #fafafa;
-    --red: #EA1D2C;
+    --amber-dark: #FFA500;
     --font1: "Oswald";
     --font2: "Montserrat";
     --font3: "Roboto";
@@ -24,11 +24,11 @@
 
 #banner a {
     color: white;
-    transition: 0.2s
+    transition: 0.2s;
 }
 
 #banner a:hover {
-    color: var(--red);
+    color: var(--amber);
     transition: 0.2s;
 }
     /* Sowwyz */
@@ -81,7 +81,7 @@
                     font-size: 300%;
                     margin-bottom: 20px;
                     font-family: var(--font1);
-                    color: var(--red); 
+                    color: var(--amber); 
                 }
         
                 #banner #banner-title p {
@@ -100,7 +100,7 @@
                 }
         
                 #banner #banner-title a:hover {
-                    background: var(--red);
+                    background: var(--amber);
                     color: white;
                     text-decoration: underline;
                 }
@@ -119,7 +119,7 @@
                 }
 /* Sowwyz */
     #banner footer {
-        border-top: var(--red) 2px solid;
+        border-top: var(--amber) 2px solid;
         margin: 0 5%;
         padding: 40px 0;
         font-family: var(--font2);
@@ -136,7 +136,7 @@
             }
 
             #banner footer ul li p {
-                color: var(--red)
+                color: var(--amber);
             }
 
             @media (max-width: 800px) {
@@ -155,7 +155,7 @@
             }
     
     #intro {
-        background-color: var(--red);
+        background-color: var(--amber);
         padding: 60px 30px;
     }
 
@@ -189,110 +189,4 @@
                     transform: translateX(-10px);
                 }
         }
-/* Sowwyz */
-#content {
-    padding: 50px 10%;
-    font-size: 15px;
-}
-
-    #content h1, #content h2, #content h3 {
-        font-family: var(--font1);
-    }
-
-    #content h1 {
-        border-bottom: 1px solid grey;
-        margin-bottom: 30px;
-        font-size: 300%;
-    }
-
-    #content h2, #content h3 {
-        margin-bottom: 5px;
-        font-size: 200%;
-        margin-top: 20px;
-        transition: 0.5s;
-    }
-        /* Sowwyz */
-    #content h2:hover, #content h3:hover {
-        border-left: 1px solid grey;
-        padding-left: 20px;
-        transition: 0.5s;
-    }
-    /* Sowwyz */
-    #content img {
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    /* Sowwyz */
-    #content table {
-        font-family: var(--font3);
-        border-collapse: collapse;
-        width: 80%;
-        margin: 20px 0;
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-
-        #content table thead {
-            border-bottom: 1px solid black;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-
-        #content table tr {
-            line-height: 50px;
-        }
-
-        #content table tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
-        #content table tr:hover {
-            background-color: #eee;
-        }
-
-            #content table tr td {
-                text-align: center;
-            }
-
-    #content p, #content ul, #content ol {
-        font-family: var(--font3);
-    }
-
-    #content .code {
-        background-color: #ddd;
-        font-family: consolas;
-        padding: 30px;
-        border-radius: 5px;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-/* Sowwyz */
-/* Sowwyz */
-
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-/* Sowwyz */
-
-/* Sowwyz */
-/* Sowwyz */
 /* Sowwyz */
