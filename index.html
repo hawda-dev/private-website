@@ -16,21 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/checkmark.png" type="image/x-icon">
     <style>
-        :root {
-            --dark-background: #0a0f0d;
-            --dark-gray: #1a1d1a;
-            --light-gray: #2c2f2e;
-            --text-color: #e0e0e0;
-            --accent-color: #444;
-            --font1: "Oswald", sans-serif;
-            --font2: "Montserrat", sans-serif;
-            --font3: "Roboto", sans-serif;
-        }
-
         body {
-            background: var(--dark-background);
-            color: var(--text-color);
-            font-family: var(--font3);
+            background: linear-gradient(-45deg, #0a0f0d, #FFBF00, #FFD580, #FFD580);
+            background-size: 400% 400%;
+            animation: gradientBG 5s ease infinite;
             animation: fadeIn 1.5s ease-in-out;
         }
         
@@ -39,6 +28,12 @@
             to { opacity: 1; }
         }
 
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         h1, p, h2 {
             opacity: 0;
             transform: translateY(20px);
@@ -56,56 +51,17 @@
             }
         }
         
-        a {
-            color: var(--text-color);
-            transition: 0.3s;
-        }
-
         a:hover {
-            color: var(--accent-color);
             transform: scale(1.1);
-        }
-        
-        header {
-            background: var(--dark-gray);
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 10;
-        }
-
-        header a {
-            font-family: var(--font2);
-        }
-
-        #hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: var(--light-gray);
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        #hero h1 {
-            color: var(--text-color);
-            font-family: var(--font1);
-        }
-
-        #actual {
-            padding: 50px;
-            background: var(--dark-gray);
-            text-align: center;
+            transition: 0.3s;
         }
     </style>
 </head>
 
-<body>
+<body style="background-color:black;">
     <header>
         <div id="home">
-            <a href="">@Hawda_.</a>
+            <a style="color:var(--soft-amber);" href="">@Hawda_.</a>
         </div>
         <ul id="pages">
             <li><a href="#actual">about</a></li>
@@ -116,33 +72,51 @@
 
     <div id="hero">
         <div id="title">
-            <h1>2013 is back!</h1>
+            <h1> 2013 is back!</h1>
             <p>
-                🔑 Online Multiplayer<br>
-                ✅ All Devices Support<br>
-                🔥 Fast Updates<br>
-                🔒 100% Safe<br>
+                🔑: online multiplayer<br>
+                ✅: all devices support<br>
+                🔥: fast update<br>
+                🔒: 100% safe<br>
             </p>
         </div>
+        <footer id="contact">
+            <ul>
+                <li><a href="soon" target="_blank"><p>download</p>coming soon</a></li>
+                <li><a href="https://discord.gg/abgon" target="_blank"><p>Discord</p>gg/abgon</a></li>
+            </ul>
+        </footer>
     </div>
 
     <div id="actual">
         <div id="actual-title">
-            <h2>📱 iOS Support Coming Soon</h2>
+            <h2>: 📱 ios support soon</h2>
         </div>
         <div id="actual-list">
             <ul>
                 <li>
-                    <h4>Note: This game is not out yet, do not ask in Discord</h4>
-                    <p>Beta release expected in March</p>
+                    <h4>note: this game is not out yet, do not ask in dc</h4>
+                    <p>beta release expected in march</p>
                 </li>
             </ul>
         </div>
     </div>
 
     <div id="resume">
-        <h2>Credits</h2>
-        <p>More details coming soon...</p>
+        <div id="experience">
+            <h2> </h2>
+            <ol>
+                <li class="title">
+                    <h3 class="item"> </h3>
+                    <h4 class="institution"> </h4>
+                    <ol class="time">
+                        <dt class="start">feb/2025</dt>
+                        <dt class="end">Now</dt>
+                    </ol>
+                    <p class="description">.</p>
+                </li>
+            </ol>
+        </div>
     </div>
 
     <script>footer()</script>
