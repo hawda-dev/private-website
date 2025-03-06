@@ -1,10 +1,9 @@
-
-/* Dark Amber Themed */
+/* Dark Black Themed */
 :root {
-    --dark-brown: #2b1d16;   /* Deep brown for background */
-    --amber: #ffbf00;        /* Amber color for accents */
-    --text-color: #f2e4b5;    /* Soft light amber for text */
-    --soft-amber: #e08e00;   /* Softer amber shade */
+    --dark-black: #0B0C0A;   /* Deep black background */
+    --dark-gray: #121212;   /* Dark gray for contrast */
+    --text-color: #E0E0E0;  /* Soft white text */
+    --accent-gray: #A0A0A0; /* Lighter gray for accents */
     --font1: "Oswald";
     --font2: "Montserrat";
     --font3: "Roboto";
@@ -16,6 +15,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 a {
@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-    color: var(--amber);
+    color: var(--accent-gray);
     transition: 0.2s;
 }
 
@@ -34,7 +34,7 @@ header {
     height: 10vh;
     width: 100%;
     display: flex;
-    background: rgba(43, 29, 22, 0.9);  /* Dark brown with slight opacity */
+    background: rgba(11, 12, 10, 0.9);  /* Black with slight opacity */
     font-family: var(--font2);
 }
 
@@ -74,7 +74,7 @@ header #pages li {
 }
 
 #hero {
-    background: var(--dark-brown);  /* Dark brown background */
+    background: var(--dark-black);  /* Black background */
     height: 100vh;
     padding: 0 var(--horizontal_margin);
 }
@@ -87,12 +87,12 @@ header #pages li {
 }
 
 #hero #title h1 {
-    color: var(--amber);  /* Amber color for title */
+    color: var(--text-color);  /* White title */
     font-family: var(--font1);
 }
 
 #hero #title p {
-    color: var(--text-color);  /* Soft light amber for text */
+    color: var(--accent-gray);  /* Gray text */
     text-align: left;
     font-family: var(--font3);
 }
@@ -102,7 +102,7 @@ header #pages li {
     position: absolute;
     width: 85%;
     padding: 40px 0;
-    border-top: var(--soft-amber) 2px solid;  /* Softer amber for border */
+    border-top: var(--dark-gray) 2px solid;  /* Dark gray border */
     font-family: var(--font2);
 }
 
@@ -117,7 +117,7 @@ header #pages li {
 }
 
 #hero #contact ul li p {
-    color: var(--amber);  /* Amber color for contact text */
+    color: var(--accent-gray);  /* Gray text */
 }
 
 @media (max-width: 800px) {
@@ -138,4 +138,3 @@ header #pages li {
         font-size: 60%;
     }
 }
-
