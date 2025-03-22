@@ -5,7 +5,7 @@ function check(form) {
 	if(form.userid.value == username[1] && form.pswrd.value == password[0]||form.userid.value == username[1] && form.pswrd.value == password[1]) {
 		location.replace('#adminhome')/* The Administrator homepage */
 	}
-	else if(form.userid.value == username[5] && form.pswrd.value == password[5]) {
+	else if(form.userid.value == username[4] && form.pswrd.value == password[4]) {
 		location.replace('papi.html')/* The members homepage */
 	}
 		else if(form.userid.value == username[3] && form.pswrd.value == password[3]) {
