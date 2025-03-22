@@ -14,7 +14,6 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background: #111;
       color: #ddd;
       display: flex;
       justify-content: center;
@@ -23,19 +22,26 @@
       overflow: hidden;
       margin: 0;
       position: relative;
-      animation: backgroundAnimation 10s infinite alternate;
+      animation: backgroundAnimation 15s ease-in-out infinite;
+      background-size: 400% 400%;
     }
 
-    /* Background Animation */
+    /* Dark Animated Background */
     @keyframes backgroundAnimation {
       0% {
         background: linear-gradient(45deg, #2d3e50, #3f4f65);
       }
-      50% {
+      25% {
         background: linear-gradient(45deg, #4f5f75, #3f4f65);
       }
-      100% {
+      50% {
         background: linear-gradient(45deg, #3f4f65, #2d3e50);
+      }
+      75% {
+        background: linear-gradient(45deg, #3a4f64, #4f5f75);
+      }
+      100% {
+        background: linear-gradient(45deg, #2d3e50, #3f4f65);
       }
     }
 
@@ -104,6 +110,7 @@
       font-size: 1.5em;
       margin: 20px 0;
       transition: transform 0.3s ease, background-color 0.3s ease;
+      text-decoration: none; /* Remove underline */
     }
 
     .add-funds:hover {
@@ -237,8 +244,11 @@
       </div>
     </div>
 
+    <!-- Add Funds Button wrapped in an anchor tag for redirection -->
     <div style="text-align: center;">
-      <button class="add-funds">Add Funds</button>
+      <a href="index.html">
+        <button class="add-funds">Add Funds</button>
+      </a>
     </div>
   </div>
 
@@ -246,5 +256,6 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
+
 
 
